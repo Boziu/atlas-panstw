@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Państw Świata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scroll-banner">
+        <p>Powered by Łukasz</p>
+    </div>
+
+    <header>
+        <h1>Atlas Państw Świata</h1>
+        <p>Wyszukaj państwo i poznaj jego dane.</p>
+    </header>
+
+    <div class="container">
+        <aside id="lewa-kolumna">
+            <section id="szczegoly-kraju">
+                <div class="nawigacja">
+                    <button onclick="pokazPoprzedniKraj()">⬅ Poprzednie</button>
+                    <div>
+                        <h2 id="nazwa-kraju"></h2>
+                        <h3 id="kontynent"></h3>
+                    </div>
+                    <button onclick="pokazNastepnyKraj()">Następne ➡</button>
+                </div>
+
+                <img id="flaga" src="" alt="Flaga kraju">
+                <p><strong>Stolica:</strong> <span id="stolica"></span></p>
+                <p><strong>Powierzchnia:</strong> <span id="powierzchnia"></span> km²</p>
+                <p><strong>Ludność:</strong> <span id="ludnosc"></span></p>
+                <p><strong>Waluta:</strong> <span id="waluta"></span></p>
+                <p><strong>Język urzędowy:</strong> <span id="jezyk"></span></p>
+
+                <h3>Pogoda:</h3>
+                <p><strong>Temperatura:</strong> <span id="temperatura"></span>°C</p>
+                <p><strong>Warunki:</strong> <span id="warunki"></span></p>
+
+                <h3>Czas lokalny:</h3>
+                <ul id="lista-czasow"></ul>
+            </section>
+        </aside>
+
+        <main>
+            <iframe id="mapa" src="" style="border:0;"></iframe>
+        </main>
+
+        <aside id="prawa-kolumna">
+            <input type="text" id="szukaj" placeholder="Wpisz nazwę kraju..." oninput="szukajKraju()">
+            <ul id="lista-krajow"></ul>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

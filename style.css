@@ -1,0 +1,107 @@
+/* Pasek scrollującego tekstu */
+.scroll-banner {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right, #ff8c00, #ff4500);
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.scroll-banner p {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: bold;
+    padding-left: 100%;
+    animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Nagłówek */
+header {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Główny układ strony */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Lewa kolumna */
+#lewa-kolumna {
+    width: 30%;
+    padding-right: 20px;
+}
+
+/* Prawa kolumna */
+#prawa-kolumna {
+    width: 30%;
+    padding-left: 20px;
+}
+
+/* Mapa na środku */
+main {
+    width: 40%;
+    text-align: center;
+}
+
+#mapa {
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    background: #ddd;
+}
+
+/* Naprawa wyświetlania flagi */
+#flaga {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Naprawa tekstu */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Poprawka responsywności */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #lewa-kolumna, #prawa-kolumna, main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #mapa {
+        width: 100%;
+        max-width: 100%;
+    }
+}
